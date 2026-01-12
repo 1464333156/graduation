@@ -1,19 +1,20 @@
-python==3.9
-# 云端专用：使用 CPU 版本避免安装崩溃，体积更小，速度更快
-tensorflow-cpu>=2.13.0,<2.16.0
+# 核心框架：TF 2.13.0 是支持 Python 3.10 的稳定版本
+tensorflow==2.13.0
 
-# 基础科学计算 (锁定版本防止 NumPy 2.0 冲突)
-numpy>=1.23.0,<2.0.0
+# 关键兼容性补丁：解决 Python 3.10 下的依赖冲突
+# 必须使用 3.x 版本的 protobuf 以兼容 TF 2.13
+protobuf==3.20.3
+# NumPy 必须限制在 1.x，因为 Python 3.10 默认会装 2.x，那会导致 TF 崩溃
+numpy>=1.23.2,<2.0.0
+# 其他计算库
 pandas>=2.0.0
 scipy>=1.10.0
 
-# 可视化与界面
-streamlit>=1.30.0
-matplotlib>=3.7.0
-seaborn>=0.13.0
-scikit-learn>=1.2.0
-
-# 核心辅助
+# 界面与绘图 (不锁定小版本，让云端匹配最适合 3.10 的补丁版)
+streamlit
+matplotlib
+seaborn
+scikit-learn
 pillow
 h5py
 typing-extensions>=4.5.0
