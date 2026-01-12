@@ -1,7 +1,12 @@
+import os
+import sys
+
+# 将当前目录添加到系统路径，确保云端能找到 model, lib 等模块
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 import streamlit as st
 import numpy as np
 import tensorflow as tf
-import os
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -11,7 +16,6 @@ plt.rcParams['axes.unicode_minus'] = False
 
 import pandas as pd
 import subprocess
-import sys
 import time
 from model import MYPLAN, BaselineRNN, BaselineMLP
 from lib.utils import get_neigh_index, prepare_data, get_f1_threshold, get_metrics
