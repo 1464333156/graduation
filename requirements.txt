@@ -1,13 +1,13 @@
+python==3.9
+# 云端专用：使用 CPU 版本避免安装崩溃，体积更小，速度更快
+tensorflow-cpu>=2.13.0,<2.16.0
 
-# 核心框架：指定主版本，允许云端选择最适配 Linux 的小版本
-tensorflow>=2.13.0,<2.16.0
-
-# 基础计算：锁定 NumPy 1.x 是防止崩溃的核心（TensorFlow 2.13 不支持 NumPy 2.0）
+# 基础科学计算 (锁定版本防止 NumPy 2.0 冲突)
 numpy>=1.23.0,<2.0.0
 pandas>=2.0.0
 scipy>=1.10.0
 
-# 界面与绘图：保持与本地功能一致
+# 可视化与界面
 streamlit>=1.30.0
 matplotlib>=3.7.0
 seaborn>=0.13.0
@@ -17,4 +17,3 @@ scikit-learn>=1.2.0
 pillow
 h5py
 typing-extensions>=4.5.0
-
