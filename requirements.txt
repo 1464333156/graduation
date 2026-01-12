@@ -1,18 +1,19 @@
-# 核心框架：对应你本地的 2.13.0，但在 Linux 云端使用标准的 tensorflow 包
-tensorflow==2.13.0
+python==3.9
+# 核心框架：指定主版本，允许云端选择最适配 Linux 的小版本
+tensorflow>=2.13.0,<2.16.0
 
-# 基础计算：锁定到你本地的 1.23.0 和 2.0.3
-numpy==1.23.0
-pandas==2.0.3
-scipy==1.10.1
+# 基础计算：锁定 NumPy 1.x 是防止崩溃的核心（TensorFlow 2.13 不支持 NumPy 2.0）
+numpy>=1.23.0,<2.0.0
+pandas>=2.0.0
+scipy>=1.10.0
 
-# 界面与绘图：精确匹配本地版本
-streamlit==1.40.1
-matplotlib==3.7.5
-seaborn==0.13.2
-scikit-learn==1.2.1
+# 界面与绘图：保持与本地功能一致
+streamlit>=1.30.0
+matplotlib>=3.7.0
+seaborn>=0.13.0
+scikit-learn>=1.2.0
 
-# 核心辅助依赖
-pillow==10.4.0
-h5py==3.11.0
-typing-extensions==4.12.2
+# 核心辅助
+pillow
+h5py
+typing-extensions>=4.5.0
