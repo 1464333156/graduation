@@ -1,4 +1,4 @@
-python==3.9
+
 # 核心框架：指定主版本，允许云端选择最适配 Linux 的小版本
 tensorflow>=2.13.0,<2.16.0
 
@@ -17,3 +17,4 @@ scikit-learn>=1.2.0
 pillow
 h5py
 typing-extensions>=4.5.0
+
