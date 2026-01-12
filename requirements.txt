@@ -1,8 +1,17 @@
-tensorflow>=2.15.0
-numpy>=1.23.5,<2.0.0
-pandas
-streamlit>=1.30.0
-matplotlib
-seaborn
-scikit-learn
-Pillow
+# 核心深度学习框架 (参考本地 2.13.0 版本)
+tensorflow==2.13.0
+
+# 基础科学计算 (精确匹配本地版本)
+numpy==1.23.0
+pandas==2.0.3
+scipy==1.10.1
+
+# 可视化与界面 (精确匹配本地版本)
+streamlit==1.40.1
+matplotlib==3.7.5
+seaborn==0.13.2
+scikit-learn==1.2.1
+
+# 辅助依赖
+pillow==10.4.0
+h5py==3.11.0
